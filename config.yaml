@@ -1,0 +1,1412 @@
+species_mapping:
+  Cheracebus_lugens:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0001
+    - PD_0315
+    - PD_0316
+    - PD_0317
+    - PD_0318
+    - PD_0319
+    - PD_0320
+    - PD_0321
+  # Callibella_humilis:
+  #   reference: Callithrix_jacchus
+  #   samples:
+  #   - PD_0002  WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Cacajao_hosomi:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0003
+    - PD_0129
+  Ateles_belzebuth:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0004
+    - PD_0138
+  Alouatta_macconnelli:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0005
+    - PD_0089
+    - PD_0135
+    - PD_0416
+    - PD_0417
+  Chiropotes_israelita:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0006
+    - PD_0326
+    - PD_0327
+    - PD_0328
+  Cebus_olivaceus:
+    reference: Cebus_albifrons
+    samples:
+    - PD_0007
+    - PD_0079
+  Aotus_trivirgatus:
+    reference: Aotus_nancymaae
+    samples:
+    - PD_0008
+  # Saguinus_inustus:
+  #   reference: Saguinus_midas
+  #   samples:
+  #   - PD_0009 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Cebuella_niveiventris:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0010
+    - PD_0287
+  Sapajus_macrocephalus:
+    reference: Sapajus_apella
+    samples:
+    - PD_0011
+    - PD_0378
+    - PD_0379
+    - PD_0381
+    - PD_0382
+    - PD_0383
+    - PD_0384
+    - PD_0385
+    - PD_0386
+    - PD_0387
+    - PD_0388
+    - PD_0389
+  Saimiri_ustus:
+    reference: Cebus_albifrons
+    samples:
+    - PD_0012
+    - PD_0363
+    - PD_0366
+    - PD_0367
+    - PD_0368
+    - PD_0369
+    - PD_0370
+    - PD_0371
+    - PD_0374
+    - PD_0375
+  Cebus_unicolor:
+    reference: Cebus_albifrons
+    samples:
+  #  - PD_0013 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0077
+    - PD_0310
+    - PD_0311
+  Plecturocebus_cupreus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0014
+    - PD_0338
+    - PD_0339
+    - PD_0340
+    - PD_0341
+  Pithecia_vanzolinii:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0015
+  Lagothrix_lagothricha:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0016
+  Leontocebus_nigricollis:
+    reference: Saguinus_midas
+    samples:
+    - PD_0017
+  Cacajao_melanocephalus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0018
+    - PD_0128
+  Cacajao_ayresi:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0019
+    - PD_0022
+    - PD_0131
+  Cacajao_calvus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0020
+    - PD_0021
+    - PD_0023
+    - PD_0024
+    - PD_0088
+    - PD_0130
+    - PD_0132
+#    - PD_0133 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0289
+    - PD_0290
+    - PD_0291
+    - PD_0292
+    - PD_0306
+    - PD_0307
+    - PD_0308
+    - PD_0434
+    - PD_0435
+    - PD_0436
+    - PD_0437
+  Alouatta_seniculus:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0025
+    - PD_0072
+    - PD_0134
+    - PD_0136
+    - PD_0297
+    - PD_0298
+    - PD_0412
+  #  - PD_0413 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0414
+    - PD_0418
+    - PD_0422
+    - PD_0423
+    - PD_0424
+    - PD_0425
+    - PD_0428
+  Alouatta_puruensis:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0026
+    - PD_0137
+    - PD_0419
+    # - PD_0426 Incongruence between species name and sample name
+    # - PD_0429 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0430
+  Alouatta_discolor:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0027
+    - PD_0295
+  Allenopithecus_nigroviridis:
+    reference: Chlorocebus_aethiops
+    samples:
+    - PD_0028
+    - PD_0126
+  Allochrocebus_lhoesti:
+    reference: Chlorocebus_aethiops
+    samples:
+    - PD_0029
+    - PD_0127
+  Allochrocebus_preussi:
+    reference: Chlorocebus_aethiops
+    samples:
+    - PD_0030
+  Allochrocebus_solatus:
+    reference: Chlorocebus_aethiops
+    samples:
+    - PD_0031
+  Cercopithecus_ascanius:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0032
+    - PD_0066
+    - PD_0406
+    - PD_0410
+  Cercopithecus_nictitans:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0033
+    - PD_0090
+  Erythrocebus_patas:
+    reference: Erythrocebus_patas
+    samples:
+    - PD_0034
+    - PD_0062
+  Hylobates_klossii:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0035
+  Hylobates_abbotti:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0036
+  Nomascus_concolor:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0037
+  Lophocebus_aterrimus:
+    reference: Mandrillus_sphinx
+    samples:
+    - PD_0040
+  Cercopithecus_cephus:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0041
+    - PD_0094
+    - PD_0095
+  Cercopithecus_mona:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0042
+  Cercopithecus_lowei:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0043
+  Macaca_siberu:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0044
+  Hylobates_muelleri:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0049
+  Hylobates_agilis:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0050
+  Nomascus_gabriellae:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0051
+  Colobus_polykomos:
+    reference: Colobus_guereza
+    samples:
+    - PD_0055
+  Colobus_guereza:
+    reference: Colobus_guereza
+    samples:
+    - PD_0056
+  Mandrillus_sphinx:
+    reference: Mandrillus_sphinx
+    samples:
+    - PD_0057
+  Cercopithecus_neglectus:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0058
+    - PD_0407
+  Cercopithecus_diana:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0059
+  Cercopithecus_hamlyni:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0060
+  Cercopithecus_mitis:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0061
+    - PD_0096
+  Semnopithecus_vetulus:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0063
+    - PD_0843
+    - PD_0847
+  Semnopithecus_johnii:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0065
+    - PD_0601
+  # Theropithecus_gelada:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0067
+  Cercocebus_chrysogaster:
+    reference: Cercocebus_atys
+    samples:
+    - PD_0068
+  Macaca_maura:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0070
+  Macaca_arctoides:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0071
+    - PD_0533
+    - PD_0534
+    - PD_0535
+  #  - PD_0536 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0860
+  Alouatta_caraya:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0073
+    - PD_0299
+  Ateles_chamek:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0074
+    - PD_0139
+    - PD_0140
+    - PD_0300
+    - PD_0301
+    - PD_0302
+    - PD_0303
+  #  - PD_0305
+    - PD_0431
+    - PD_0432
+    - PD_0433
+  Ateles_paniscus:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0075
+    - PD_0304
+  Ateles_marginatus:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0076
+  Cebus_albifrons:
+    reference: Cebus_albifrons
+    samples:
+    - PD_0078
+    - PD_0141
+    - PD_0402
+  Chiropotes_albinasus:
+    reference: Pithecia_pithecia
+    samples:
+  #  - PD_0080 Very different callable length of the genome
+    - PD_0142
+    - PD_0323
+  #  - PD_0324 Very different callable length of the genome
+    - PD_0325
+    - PD_0345
+  #  - PD_0409 Very different callable length of the genome 
+  Chiropotes_sagulatus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0081
+    - PD_0082
+    - PD_0329
+    - PD_0330
+  Pithecia_pissinattii:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0083
+    - PD_0144
+    - PD_0331
+  Pithecia_chrysocephala:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0084
+  Pithecia_hirsuta:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0085
+    - PD_0143
+  Pithecia_mittermeieri:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0086
+  Pithecia_albicans:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0087
+  Cercopithecus_petaurista:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0091
+  Cercopithecus_pogonias:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0092
+  Cercopithecus_roloway:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0093
+  Macaca_leonina:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0097
+    - PD_0540
+    - PD_0541
+    - PD_0542
+    - PD_0543
+    - PD_0544
+    - PD_0545
+  Hylobates_lar:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0098
+  Nomascus_siki:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0099
+  Semnopithecus_priam:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0100
+  Semnopithecus_entellus:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0102
+    - PD_0582
+    - PD_0583
+    - PD_0584
+    - PD_0585
+    - PD_0586
+    - PD_0587
+  #  - PD_0588
+  Nycticebus_pygmaeus:
+    reference: Nycticebus_pygmaeus
+    samples:
+    - PD_0110
+    - PD_0111
+  Callimico_goeldii:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0116
+  Mico_argentatus:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0117
+    - PD_0162
+    - PD_0281
+  Leontocebus_illigeri:
+    reference: Saguinus_midas
+    samples:
+    - PD_0118
+  Saguinus_imperator:
+    reference: Saguinus_midas
+    samples:
+    - PD_0119
+  Saguinus_labiatus:
+    reference: Saguinus_midas
+    samples:
+    - PD_0120
+    - PD_0348
+  Saguinus_midas:
+    reference: Saguinus_midas
+    samples:
+    - PD_0121
+    - PD_0349
+    - PD_0350
+  # Saguinus_oedipus:
+  #   reference: Saguinus_midas
+  #   samples:
+  #   - PD_0122 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Leontocebus_fuscicollis:
+    reference: Saguinus_midas
+    samples:
+    - PD_0123
+    - PD_0347
+    - PD_0352
+  Miopithecus_ogouensis:
+    reference: Cercopithecus_mitis
+    samples:
+    - PD_0124
+  Cercocebus_lunulatus:
+    reference: Cercocebus_atys
+    samples:
+    - PD_0125
+  Arctocebus_calabarensis:
+    reference: Nycticebus_pygmaeus
+    samples:
+    - PD_0145
+  # Avahi_laniger:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0146
+  # Avahi_peyrierasi:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0147 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Daubentonia_madagascariensis:
+    reference: Daubentonia_madagascariensis
+    samples:
+    - PD_0148
+  Eulemur_albifrons:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0149
+  Eulemur_collaris:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0150
+    - PD_0247
+    - PD_0610
+  Eulemur_coronatus:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0151
+    - PD_0611
+  Eulemur_flavifrons:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0152
+    - PD_0612
+  Eulemur_macaco:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0153
+  #  - PD_0614 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Eulemur_sanfordi:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0154
+    - PD_0618
+  Galago_moholi:
+    reference: Galago_moholi
+    samples:
+    - PD_0155
+  Galago_senegalensis:
+    reference: Galago_moholi
+    samples:
+    - PD_0156
+  # Hapalemur_gilberti:
+  #   reference: Lemur_catta-Thomas
+  #   samples:
+  #   - PD_0157 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Hapalemur_griseus:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0158
+  Hapalemur_meridionalis:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0159
+  # Hapalemur_occidentalis:
+  #   reference: Lemur_catta-Thomas
+  #   samples:
+  #   - PD_0160 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Lepilemur_septentrionalis:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0161
+    - PD_0250
+  Mirza_zaza:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0163
+  #  - PD_0608 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Nomascus_annamensis:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0164
+  Perodicticus_ibeanus:
+    reference: Nycticebus_pygmaeus
+    samples:
+    - PD_0165
+  Prolemur_simus:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0166
+  # Propithecus_coronatus:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0167
+  # Propithecus_diadema:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0168
+  #   - PD_0251
+  # Propithecus_edwardsi:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0169
+  # Propithecus_perrieri:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0170
+  #   - PD_0252
+  # Propithecus_tattersalli:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0171
+  # Propithecus_verreauxi:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0172
+  Chlorocebus_pygerythrus:
+    reference: Chlorocebus_aethiops
+    samples:
+    - PD_0173
+  # Saguinus_geoffroyi:
+  #   reference: Saguinus_midas
+  #   samples:
+  #   - PD_0174 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Alouatta_palliata:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0175
+  # Saimiri_oerstedii:
+  #   reference: Cebus_albifrons
+  #   samples:
+  #   - PD_0176 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Ateles_geoffroyi:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0177
+  Gorilla_beringei:
+    reference: Gorilla_gorilla_gorilla
+    samples:
+    - PD_0179
+    - SAMN01920473
+    - SAMN01920474
+  #  - SAMN01920475 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Gorilla_gorilla:
+    reference: Gorilla_gorilla_gorilla
+    samples:
+    - PD_0180
+    - PD_0181
+    - PD_0182
+    - PD_0183
+    - PD_0184
+    - PD_0185
+    - PD_0186
+  #  - PD_0187 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0188
+    - PD_0189
+    - PD_0190
+    - PD_0191
+    - PD_0192
+    - PD_0193
+    - PD_0194
+    - PD_0195
+    - PD_0196
+    - PD_0197
+    - PD_0198
+  #  - PD_0260 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0264
+    - SAMN01920476
+    - SAMN01920477
+    - SAMN01920478
+    - SAMN01920479
+    - SAMN01920480
+    - SAMN01920481
+    - SAMN01920482
+    - SAMN01920483
+    - SAMN01920484
+    - SAMN01920485
+    - SAMN01920486
+    - SAMN01920487
+    - SAMN01920488
+    - SAMN01920489
+    - SAMN01920490
+    - SAMN01920491
+    - SAMN01920492
+    - SAMN01920493
+    - SAMN01920494
+    - SAMN01920495
+    - SAMN01920496
+    - SAMN01920497
+    - SAMN01920498
+    - SAMN01920499
+    - SAMN01920500
+    - SAMN01920501
+    - SAMN01920502
+    - SAMN01920503
+  # Papio_anubis:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0199
+  #   - PD_0200
+  #   - PD_0201
+  #   - PD_0202
+  #   - PD_0203
+  #   - PD_0204
+  #   - PD_0205
+  #   - PD_0206
+  #   - PD_0207
+  #   - PD_0208
+  #   - PD_0209
+  #   - PD_0210
+  #   - PD_0211
+  #   - PD_0212
+  #   - PD_0218
+  #   - PD_0219
+  #   - PD_0220
+  #   - PD_0221
+  #   - PD_0222
+  #   - PD_0238
+  #   - PD_0239
+  #   - PD_0240
+  #   - PD_0241
+  #   - PD_0242
+  #   - PD_0243
+  #   - PD_0244
+  #   - PD_0265
+  #   - PD_0266
+  #   - PD_0267
+  #   - PD_0720
+  #   - PD_0721
+  #   - PD_0722
+  #   - PD_0723
+  #   - PD_0724
+  #   - PD_0725
+  #   - PD_0726
+  #   - PD_0727
+  #   - PD_0728
+  #   - PD_0729
+  #   - PD_0730
+  #   - PD_0731
+  #   - PD_0732
+  #   - PD_0733
+  #   - PD_0734
+  #   - PD_0735
+  #   - PD_0736
+  #   - PD_0737
+  #   - PD_0738
+  #   - PD_0739
+  #   - PD_0740
+  #   - PD_0741
+  #   - PD_0742
+  #   - PD_0743
+  #   - PD_0744
+  # Papio_cynocephalus:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0213
+  #   - PD_0214
+  #   - PD_0215
+  #   - PD_0216
+  #   - PD_0217
+  #   - PD_0223
+  #   - PD_0224
+  #   - PD_0225
+  #   - PD_0226
+  #   - PD_0227
+  #   - PD_0228
+  #   - PD_0229
+  #   - PD_0230
+  #   - PD_0231
+  #   - PD_0232
+  #   - PD_0233
+  #   - PD_0234
+  #   - PD_0235
+  #   - PD_0236
+  #   - PD_0237
+  #   - PD_0268
+  #   - PD_0269
+  #   - PD_0270
+  #   - PD_0271
+  #   - PD_0272
+  #   - PD_0745
+  #   - PD_0746
+  #   - PD_0747
+  #   - PD_0748
+  #   - PD_0752
+  #   - PD_0753
+  #   - PD_0754
+  #   - PD_0755 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #   - PD_0756
+  #   - PD_0757
+  #   - PD_0761
+  #   - PD_0762
+  #   - PD_0763
+  #   - PD_0764
+  #   - PD_0765
+  #   - PD_0766
+  #   - PD_0767
+  #   - PD_0768
+  #   - PD_0769
+  #   - PD_0770
+  #   - PD_0771
+  #   - PD_0772
+  #   - PD_0773
+  #   - PD_0774
+  #   - PD_0775
+  Lepilemur_ankaranensis:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0245
+    - PD_0248
+  Lepilemur_dorsalis:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0246
+  Lepilemur_ruficaudatus:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0249
+  Cercocebus_torquatus:
+    reference: Cercocebus_atys
+    samples:
+    - PD_0256
+    - PD_0408
+  Pan_troglodytes:
+    reference: Pan_troglodytes
+    samples:
+    - PD_0257
+    - PD_0258
+    - PD_0259
+    - PD_0427
+    - SAMN01920517
+    - SAMN01920518
+    - SAMN01920519
+    - SAMN01920520
+    - SAMN01920521
+    - SAMN01920522
+    - SAMN01920523
+    - SAMN01920524
+    - SAMN01920525
+    - SAMN01920526
+    - SAMN01920527
+    - SAMN01920528
+    - SAMN01920529
+  #  - SAMN01920530
+    - SAMN01920531
+    - SAMN01920532
+    - SAMN01920533
+    - SAMN01920534
+  #  - SAMN01920535
+    - SAMN01920536
+    - SAMN01920537
+    - SAMN01920538
+    - SAMN01920539
+    - SAMN01920540
+    - SAMN01920541
+  Macaca_mulatta:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0261
+    - PD_0546
+    - PD_0547
+    - PD_0548
+    - PD_0549
+    - PD_0550
+    - PD_0551
+  Pongo_pygmaeus:
+    reference: Pongo_pygmaeus
+    samples:
+    - PD_0262
+    - SAMN01920547
+    - SAMN01920548
+    - SAMN01920549
+    - SAMN01920550
+    - SAMN01920551
+  Pongo_abelii:
+    reference: Pongo_abelii
+    samples:
+    - PD_0263
+    - SAMN01920542
+    - SAMN01920543
+    - SAMN01920544
+    - SAMN01920545
+    - SAMN01920546
+  Plecturocebus_bernhardi:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0273
+    - PD_0332
+    - PD_0333
+  Plecturocebus_brunneus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0274
+    - PD_0334
+  Plecturocebus_caligatus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0275
+    - PD_0335
+    - PD_0336
+  Plecturocebus_cinerascens:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0276
+    - PD_0337
+  Plecturocebus_dubius:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0277
+    - PD_0342
+    - PD_0343
+  Plecturocebus_grovesi:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0278
+  Plecturocebus_hoffmannsi:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0279
+  Plecturocebus_miltoni:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0280
+  Mico_humeralifer:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0282
+  Mico_spnv:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0283
+  Cheracebus_regulus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0284
+    - PD_0322
+  Cheracebus_torquatus:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0285
+  Aotus_vociferans:
+    reference: Aotus_nancymaae
+    samples:
+    - PD_0286
+    - PD_0794
+    - PD_0795
+    - PD_0796
+    - PD_0797
+  Cheracebus_lucifer:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0288
+    - PD_0312
+    - PD_0313
+    - PD_0314
+  Leontopithecus_rosalia:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0293
+    - PD_0411
+  Alouatta_belzebul:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0294
+  Alouatta_nigerrima:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0296
+    - PD_0415
+  Cebuella_pygmaea:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0309
+  Plecturocebus_moloch:
+    reference: Pithecia_pithecia
+    samples:
+    - PD_0344
+  Saguinus_bicolor:
+    reference: Saguinus_midas
+    samples:
+    - PD_0346
+  Saguinus_mystax:
+    reference: Saguinus_midas
+    samples:
+    - PD_0351
+  Saimiri_cassiquiarensis:
+    reference: Cebus_albifrons
+    samples:
+    - PD_0353
+    - PD_0354
+    - PD_0355
+    - PD_0356
+    - PD_0357
+    - PD_0358
+    - PD_0359
+    - PD_0360
+    - PD_0373
+  Saimiri_macrodon:
+    reference: Cebus_albifrons
+    samples:
+    - PD_0361
+    - PD_0362
+    - PD_0372
+  # Saimiri_sciureus:
+  #   reference: Cebus_albifrons
+  #   samples:
+  #   - PD_0364 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #   - PD_0365 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Sapajus_apella:
+    reference: Sapajus_apella
+    samples:
+    - PD_0376
+    - PD_0377
+    - PD_0380
+  # Papio_papio:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0390
+  #   - PD_0391
+  #   - PD_0392
+  #   - PD_0393
+  #   - PD_0394
+  #   - PD_0395
+  #   - PD_0396
+  #   - PD_0397
+  #   - PD_0398
+  #   - PD_0399
+  #   - PD_0400
+  #   - PD_0401
+  # Tarsius_lariang:
+  #   reference: Carlito_syrichta
+  #   samples:
+  #   - PD_0404 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  # Tarsius_wallacei:
+  #   reference: Carlito_syrichta
+  #   samples:
+  #   - PD_0405 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Alouatta_juara:
+    reference: Atele_fusciceps
+    samples:
+    - PD_0420
+    - PD_0421
+  Hoolock_hoolock:
+    reference: Nomascus_leucogenys
+    samples:
+  #  - PD_0525 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0527
+    - PD_0537
+  # Loris_lydekkerianus:
+  #   reference: Loris_tardigradus
+  #   samples:
+  #   - PD_0531 WARN OR FAILED COV_QC or AB_QC by Kuderna 
+  #   - PD_0532 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Macaca_fascicularis:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0538
+    - PD_0539
+    - PD_0816
+    - PD_0817
+    - PD_0818
+    - PD_0819
+    - PD_0820
+    - PD_0821
+    - PD_0822
+    - PD_0823
+    - PD_0824
+  #  - PD_0825 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0826
+    - PD_0827
+    - PD_0828
+    - PD_0829
+    - PD_0830
+    - PD_0831
+    - PD_0832
+    - PD_0833
+    - PD_0834
+    - PD_0835
+    - PD_0836
+    - PD_0837
+  #  - PD_0838 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Macaca_radiata:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0552
+    - PD_0553
+    - PD_0554
+    - PD_0555
+    - PD_0556
+    - PD_0557
+    - PD_0558
+    - PD_0559
+    - PD_0560
+    - PD_0561
+    - PD_0562
+    - PD_0563
+    - PD_0564
+  Macaca_silenus:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0565
+    - PD_0566
+    - PD_0567
+    - PD_0568
+    - PD_0569
+    - PD_0570
+    - PD_0571
+    - PD_0572
+    - PD_0573
+    - PD_0574
+    - PD_0575
+  #  - PD_0576 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0577
+  # Nycticebus_bengalensis:
+  #   reference: Nycticebus_pygmaeus
+  #   samples:
+  #  - PD_0578 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #  - PD_0579 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #  - PD_0580 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #  - PD_0581 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Semnopithecus_hypoleucos:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0589
+    - PD_0590
+    - PD_0591
+    - PD_0592
+  Semnopithecus_schistaceus:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0593
+    - PD_0594
+  # Trachypithecus_phayrei:
+  #   reference: Rhinopithecus_roxellana
+  #   samples:
+  #   - PD_0602 wierd genome in MSA
+  # Trachypithecus_pileatus:
+  #   reference: Rhinopithecus_roxellana
+  #   samples:
+  #   - PD_0603 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  Varecia_rubra:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0604
+  Cheirogaleus_major:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0605
+  Cheirogaleus_medius:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0606
+  Microcebus_murinus:
+    reference: Microcebus_murinus
+    samples:
+    - PD_0607
+  # Propithecus_coquereli:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0609
+  Eulemur_fulvus:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0613
+  Eulemur_mongoz:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0615
+  Eulemur_rubriventer:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0616
+  Eulemur_rufus:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0617
+  Hapalemur_alaotrensis:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0619
+  Lemur_catta:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0620
+  Varecia_variegata:
+    reference: Lemur_catta-Thomas
+    samples:
+    - PD_0621
+  Galagoides_demidoff:
+    reference: Galago_moholi
+    samples:
+    - PD_0622
+  Otolemur_crassicaudatus:
+    reference: Otolemur_garnettii
+    samples:
+  #  - PD_0623 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0625
+  Otolemur_garnettii:
+    reference: Otolemur_garnettii
+    samples:
+    - PD_0624
+  Loris_tardigradus:
+    reference: Loris_tardigradus
+    samples:
+    - PD_0626
+  Perodicticus_potto:
+    reference: Nycticebus_pygmaeus
+    samples:
+    - PD_0627
+  # Cephalopachus_bancanus:
+  #   reference: Carlito_syrichta
+  #   samples:
+  #   - PD_0628
+  # Carlito_syrichta:
+  #   reference: Carlito_syrichta
+  #   samples:
+  #   - PD_0629 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  # Papio_ursinus:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0692
+  #   - PD_0693
+  #   - PD_0694
+  #   - PD_0695
+  # Papio_hamadryas:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0696
+  #   - PD_0697
+  #   - PD_0698
+  #   - PD_0699
+  #   - PD_0700
+  #   - PD_0701
+  #   - PD_0702
+  #   - PD_0703
+  #   - PD_0704
+  #   - PD_0705
+  #   - PD_0706
+  #   - PD_0707
+  #   - PD_0708
+  #   - PD_0709
+  #   - PD_0710
+  #   - PD_0711
+  #   - PD_0712
+  #   - PD_0713
+  #   - PD_0714
+  #   - PD_0715
+  #   - PD_0716
+  #   - PD_0717
+  #   - PD_0718
+  #   - PD_0719
+  # Papio_kindae:
+  #   reference: Papio_anubis
+  #   samples:
+  #   - PD_0749
+  #   - PD_0750
+  #   - PD_0751
+  #   - PD_0758
+  #   - PD_0759
+  #   - PD_0760
+  #   - PD_0776
+  #   - PD_0777
+  #   - PD_0778
+  #   - PD_0779
+  #   - PD_0780
+  #   - PD_0781
+  #   - PD_0782
+  #   - PD_0783
+  #   - PD_0784
+  #   - PD_0785
+  #   - PD_0786
+  #   - PD_0787
+  #   - PD_0788
+  #   - PD_0789
+  #   - PD_0790
+  #   - PD_0791
+  #   - PD_0792
+  #   - PD_0793
+  #   - PD_0794_BAB
+  Aotus_azarae:
+    reference: Aotus_nancymaae
+    samples:
+    - PD_0798
+    - PD_0799
+    - PD_0800
+    - PD_0801
+    - PD_0806
+    - PD_0807
+    - PD_0808
+    - PD_0809
+    - PD_0810
+    - PD_0811
+    - PD_0812
+    - PD_0813
+    - PD_0814
+    - PD_0815
+  Aotus_griseimembra:
+    reference: Aotus_nancymaae
+    samples:
+    - PD_0802
+    - PD_0803
+    - PD_0804
+    - PD_0805
+  Leontopithecus_chrysomelas:
+    reference: Callithrix_jacchus
+    samples:
+  #  - PD_0840 WARN OR FAILED COV_QC or AB_QC by Kuderna
+  #  - PD_0841 WARN OR FAILED COV_QC or AB_QC by Kuderna
+    - PD_0844
+  Rhinopithecus_roxellana:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0848
+  Trachypithecus_laotum:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0849
+  Trachypithecus_melamera:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0850
+  Trachypithecus_leucocephalus:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0851
+  Trachypithecus_hatinhensis:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0852
+  Trachypithecus_germaini:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0853
+  # Indri_indri:
+  #   reference: Propithecus_coquereli
+  #   samples:
+  #   - PD_0854
+  Nycticebus_coucang:
+    reference: Nycticebus_pygmaeus
+    samples:
+    - PD_0855
+  Macaca_nigra:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0856
+  Macaca_tonkeana:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0857
+  Macaca_nemestrina:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0858
+    - PD_0867
+    - PD_0870
+    - PD_0872
+    - PD_0874
+  Macaca_assamensis:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0859
+  Callithrix_jacchus:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0861
+  Callithrix_geoffroyi:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0863
+  Callithrix_kuhlii:
+    reference: Callithrix_jacchus
+    samples:
+    - PD_0865
+  Mandrillus_leucophaeus:
+    reference: Mandrillus_sphinx
+    samples:
+    - PD_0876
+  Colobus_angolensis:
+    reference: Colobus_guereza
+    samples:
+    - PD_0879
+  Rhinopithecus_bieti:
+    reference: Rhinopithecus_roxellana
+    samples:
+    - PD_0881
+  Macaca_thibetana:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0883
+  Nomascus_leucogenys:
+    reference: Nomascus_leucogenys
+    samples:
+    - PD_0884
+  Macaca_cyclopis:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0885
+  Macaca_fuscata:
+    reference: Macaca_mulatta
+    samples:
+    - PD_0886
+  Pan_paniscus:
+    reference: Pan_troglodytes
+    samples:
+    - SAMN01920504
+    - SAMN01920505
+    - SAMN01920506
+    - SAMN01920507
+    - SAMN01920508
+  #  - SAMN01920509
+    - SAMN01920510
+    - SAMN01920511
+    - SAMN01920512
+    - SAMN01920513
+    - SAMN01920514
+    - SAMN01920515
+    - SAMN01920516
