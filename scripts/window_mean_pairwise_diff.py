@@ -2,9 +2,9 @@ import allel
 import numpy as np
 import pandas as pd
 
-def analyze_pairwise_diff_in_windows(vcf_path, bed_path=None, window_size=None):
+def analyze_diversity_in_windows(vcf_path, bed_path=None, window_size=None):
     """
-    Analyze mean pairwise differences in windows, using either BED file windows or fixed-size windows.
+    Analyze nucleotide diversity in windows, using either BED file windows or fixed-size windows.
     
     Parameters:
     -----------
@@ -18,7 +18,7 @@ def analyze_pairwise_diff_in_windows(vcf_path, bed_path=None, window_size=None):
     Returns:
     --------
     pandas.DataFrame
-        DataFrame containing window-based statistics
+        DataFrame containing window-based diversity statistics
     """
     # Read VCF file
     callset = allel.read_vcf(vcf_path)
@@ -34,6 +34,9 @@ def analyze_pairwise_diff_in_windows(vcf_path, bed_path=None, window_size=None):
         chrom_pos = pos[chrom_mask]
         chrom_gt = gt[chrom_mask]
         
+        # Calculate allele counts for the chromosome
+        ac = chrom_gt.count_alleles()
+        
         if bed_path:
             # Read BED file
             bed_df = pd.read_csv(bed_path, sep='\t', header=None,
@@ -48,7 +51,7 @@ def analyze_pairwise_diff_in_windows(vcf_path, bed_path=None, window_size=None):
                 # Get variants in this region
                 region_mask = (chrom_pos >= region['start']) & (chrom_pos <= region['end'])
                 region_pos = chrom_pos[region_mask]
-                region_gt = chrom_gt[region_mask]
+                region_ac = ac[region_mask]
                 
                 if len(region_pos) == 0:
                     results.append({
@@ -56,89 +59,75 @@ def analyze_pairwise_diff_in_windows(vcf_path, bed_path=None, window_size=None):
                         'start': region['start'],
                         'end': region['end'],
                         'n_variants': 0,
-                        'mean_pairwise_diff': 0,
-                        'variance_pairwise_diff': 0
+                        'diversity': 0,
+                        'bases': region['end'] - region['start']
                     })
                     continue
                 
-                # Calculate mean pairwise difference
-                ac = region_gt.count_alleles()
-                mpd = allel.mean_pairwise_difference(ac)
-                
-                # Calculate variance of pairwise differences
-                # First get all pairwise differences
-                n_samples = region_gt.n_samples
-                pairwise_diffs = []
-                
-                for i in range(n_samples):
-                    for j in range(i + 1, n_samples):
-                        # Get genotypes for each sample pair
-                        gt_i = region_gt[:, i]
-                        gt_j = region_gt[:, j]
-                        # Count differences
-                        diff = np.sum(gt_i != gt_j, axis=1)
-                        pairwise_diffs.extend(diff)
-                
-                var_pd = np.var(pairwise_diffs) if pairwise_diffs else 0
-                
-                results.append({
-                    'chrom': chrom,
-                    'start': region['start'],
-                    'end': region['end'],
-                    'n_variants': len(region_pos),
-                    'mean_pairwise_diff': mpd,
-                    'variance_pairwise_diff': var_pd
-                })
-        else:
-            # Use fixed-size windows
-            windows = allel.position_windows(chrom_pos, size=window_size)
-            
-            for start, stop in windows:
-                # Get variants in this window
-                window_mask = (chrom_pos >= start) & (chrom_pos < stop)
-                window_gt = chrom_gt[window_mask]
-                
-                if window_gt.shape[0] == 0:
+                try:
+                    # Calculate diversity using windowed_diversity
+                    diversity, _, n_bases, n_variants = allel.windowed_diversity(
+                        region_pos, 
+                        region_ac,
+                        start=region['start'],
+                        stop=region['end'],
+                        windows=[(region['start'], region['end'])]
+                    )
+                    
                     results.append({
                         'chrom': chrom,
-                        'start': start,
-                        'end': stop,
-                        'n_variants': 0,
-                        'mean_pairwise_diff': 0,
-                        'variance_pairwise_diff': 0
+                        'start': region['start'],
+                        'end': region['end'],
+                        'n_variants': n_variants[0],
+                        'diversity': diversity[0],
+                        'bases': n_bases[0]
                     })
-                    continue
+                    
+                except Exception as e:
+                    print(f"Warning: Diversity calculation failed for region {chrom}:{region['start']}-{region['end']}: {str(e)}")
+                    results.append({
+                        'chrom': chrom,
+                        'start': region['start'],
+                        'end': region['end'],
+                        'n_variants': len(region_pos),
+                        'diversity': np.nan,
+                        'bases': region['end'] - region['start']
+                    })
+        else:
+            # Use fixed-size windows
+            try:
+                # Calculate diversity using windowed_diversity
+                diversity, windows, n_bases, n_variants = allel.windowed_diversity(
+                    chrom_pos,
+                    ac,
+                    size=window_size,
+                    start=chrom_pos[0],
+                    stop=chrom_pos[-1]
+                )
                 
-                # Calculate mean pairwise difference
-                ac = window_gt.count_alleles()
-                mpd = allel.mean_pairwise_difference(ac)
-                
-                # Calculate variance of pairwise differences
-                n_samples = window_gt.n_samples
-                pairwise_diffs = []
-                
-                for i in range(n_samples):
-                    for j in range(i + 1, n_samples):
-                        gt_i = window_gt[:, i]
-                        gt_j = window_gt[:, j]
-                        diff = np.sum(gt_i != gt_j, axis=1)
-                        pairwise_diffs.extend(diff)
-                
-                var_pd = np.var(pairwise_diffs) if pairwise_diffs else 0
-                
-                results.append({
-                    'chrom': chrom,
-                    'start': start,
-                    'end': stop,
-                    'n_variants': window_gt.shape[0],
-                    'mean_pairwise_diff': mpd,
-                    'variance_pairwise_diff': var_pd
-                })
+                # Collect results
+                for i in range(len(windows)):
+                    results.append({
+                        'chrom': chrom,
+                        'start': windows[i][0],
+                        'end': windows[i][1],
+                        'n_variants': n_variants[i],
+                        'diversity': diversity[i],
+                        'bases': n_bases[i]
+                    })
+                    
+            except Exception as e:
+                print(f"Warning: Diversity calculation failed for chromosome {chrom}: {str(e)}")
     
     return pd.DataFrame(results)
 
+# Example usage
+
 # Run the function
-vcf = snakemake.input.vcf
-bed = snakemake.input.bed
-df = analyze_variants_in_windows(vcf, bed)
-df.to_csv(snakemake.output.csv, index=False)
+# vcf = snakemake.input.vcf
+# bed = snakemake.input.bed
+# df = analyze_variants_in_windows(vcf, bed)
+vcf = 'data/vcfs/Alouatta_puruensis.vcf.gz'
+bed = 'data/beds/Alouatta_puruensis.bed'
+df = analyze_diversity_in_windows(vcf, bed)
+df.to_csv('data/stats/Alouatta_puruensis.pi2.csv', index=False)

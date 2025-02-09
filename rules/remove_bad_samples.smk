@@ -1,6 +1,5 @@
 def get_species_samples(wildcards):
     species = wildcards.species
-    print(config["species_mapping"][species]["samples"])
     return config["species_mapping"][species]["samples"]
 
 
@@ -15,7 +14,7 @@ rule filter_bcf_samples:
         samples=lambda w: "\\n".join(get_species_samples(w))
     resources:
         mem_mb=1000*8,
-        runtime=60
+        runtime=60*4
     conda:
         "../env/bcftools.yaml"
     shell:

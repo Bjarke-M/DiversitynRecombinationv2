@@ -2,9 +2,9 @@ import allel
 import numpy as np
 import pandas as pd
 
-def analyze_singletons_in_windows(vcf_path, bed_path=None, window_size=None):
+def analyze_tajima_d_in_windows(vcf_path, bed_path=None, window_size=None, min_sites=3):
     """
-    Analyze singleton variants in windows, using either BED file windows or fixed-size windows.
+    Analyze Tajima's D in windows, using either BED file windows or fixed-size windows.
     
     Parameters:
     -----------
@@ -14,11 +14,13 @@ def analyze_singletons_in_windows(vcf_path, bed_path=None, window_size=None):
         Path to BED file defining windows. If not provided, fixed-size windows will be used.
     window_size : int, optional
         Size of windows in base pairs when not using BED file
+    min_sites : int, optional
+        Minimum number of segregating sites required to compute Tajima's D
         
     Returns:
     --------
     pandas.DataFrame
-        DataFrame containing window-based singleton statistics
+        DataFrame containing window-based Tajima's D statistics
     """
     # Read VCF file
     callset = allel.read_vcf(vcf_path)
@@ -59,71 +61,45 @@ def analyze_singletons_in_windows(vcf_path, bed_path=None, window_size=None):
                         'start': region['start'],
                         'end': region['end'],
                         'n_variants': 0,
-                        'n_singletons': 0,
-                        'singleton_proportion': 0,
-                        'mean_af': 0,
+                        'tajima_d': np.nan,
                         'bases': region['end'] - region['start']
                     })
                     continue
                 
                 try:
-                    # Calculate statistics for this region
-                    is_singleton = region_ac.is_singleton(1)
-                    n_singletons = np.sum(is_singleton)
-                    singleton_proportion = np.mean(is_singleton)
-                    afs = region_ac.to_frequencies()
-                    mean_af = np.mean(afs[:, 1]) if afs.shape[1] > 1 else 0
+                    # Calculate Tajima's D for this region
+                    tajima_d = allel.tajima_d(region_ac, min_sites=min_sites)
                     
                     results.append({
                         'chrom': chrom,
                         'start': region['start'],
                         'end': region['end'],
                         'n_variants': len(region_pos),
-                        'n_singletons': n_singletons,
-                        'singleton_proportion': singleton_proportion,
-                        'mean_af': mean_af,
+                        'tajima_d': tajima_d,
                         'bases': region['end'] - region['start']
                     })
                     
                 except Exception as e:
-                    print(f"Warning: Singleton analysis failed for region {chrom}:{region['start']}-{region['end']}: {str(e)}")
+                    print(f"Warning: Tajima's D calculation failed for region {chrom}:{region['start']}-{region['end']}: {str(e)}")
                     results.append({
                         'chrom': chrom,
                         'start': region['start'],
                         'end': region['end'],
                         'n_variants': len(region_pos),
-                        'n_singletons': np.nan,
-                        'singleton_proportion': np.nan,
-                        'mean_af': np.nan,
+                        'tajima_d': np.nan,
                         'bases': region['end'] - region['start']
                     })
                     
         else:
             # Use fixed-size windows
             try:
-                # Calculate counts and windows
-                counts, windows = allel.windowed_count(chrom_pos, size=window_size)
-                
-                # Calculate singleton counts in windows
-                is_singleton = ac.is_singleton(1)
-                singleton_counts = allel.windowed_count(chrom_pos[is_singleton], size=window_size)[0]
-                
-                # Calculate singleton proportion
-                singleton_proportion = np.divide(
-                    singleton_counts,
-                    counts,
-                    out=np.zeros_like(singleton_counts, dtype=float),
-                    where=counts > 0
-                )
-                
-                # Calculate mean allele frequency in windows
-                afs = ac.to_frequencies()
-                mean_afs = allel.windowed_statistic(
+                # Calculate Tajima's D in windows
+                tajima_d, windows, counts = allel.windowed_tajima_d(
                     chrom_pos,
-                    afs[:, 1],
-                    statistic=lambda x: np.mean(x) if len(x) > 0 else 0,
-                    size=window_size
-                )[0]
+                    ac,
+                    size=window_size,
+                    min_sites=min_sites
+                )
                 
                 # Collect results
                 for i in range(len(windows)):
@@ -132,14 +108,12 @@ def analyze_singletons_in_windows(vcf_path, bed_path=None, window_size=None):
                         'start': windows[i][0],
                         'end': windows[i][1],
                         'n_variants': counts[i],
-                        'n_singletons': singleton_counts[i],
-                        'singleton_proportion': singleton_proportion[i],
-                        'mean_af': mean_afs[i],
+                        'tajima_d': tajima_d[i],
                         'bases': windows[i][1] - windows[i][0]
                     })
                     
             except Exception as e:
-                print(f"Warning: Singleton analysis failed for chromosome {chrom}: {str(e)}")
+                print(f"Warning: Tajima's D calculation failed for chromosome {chrom}: {str(e)}")
     
     return pd.DataFrame(results)
 
@@ -151,5 +125,5 @@ def analyze_singletons_in_windows(vcf_path, bed_path=None, window_size=None):
 # df = analyze_variants_in_windows(vcf, bed)
 vcf = 'data/vcfs/Alouatta_puruensis.vcf.gz'
 bed = 'data/beds/Alouatta_puruensis.bed'
-df = analyze_singletons_in_windows(vcf, bed)
-df.to_csv('data/stats/Alouatta_puruensis.singletons.csv', index=False)
+df = analyze_tajima_d_in_windows(vcf, bed)
+df.to_csv('data/stats/Alouatta_puruensis.tajimasD.csv', index=False)

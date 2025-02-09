@@ -1,11 +1,21 @@
-rule mean_pairwise_difference:
+def get_mem_mb(wildcards, attempt):
+    return attempt * 1000 * 32
+
+def get_time(wildcards, attempt):
+    return attempt * 60 *2
+
+
+rule window_stats:
     input:
         vcf = "data/vcfs/{species}.vcf.gz",
         tbi = "data/vcfs/{species}.vcf.gz.tbi",
         bed = "data/beds/{species}.bed"
     output:
-        "data/stats/{species}.pi.csv"
+        csv ="data/stats/{species}.window.stats.csv"
+    resources:
+        mem_mb=get_mem_mb,
+        runtime= get_time
     conda:
         "../env/base.yaml"
     script:
-        "../scripts/window_mean_pairwise_diff.py"
+        "../scripts/window_stats.py"

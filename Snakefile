@@ -8,7 +8,8 @@ species = config["species_mapping"].keys()
 
 
 ######### Command to run the pipeline for the new data #########
-# snakemake
+
+# snakemake --executor slurm -j 200 --sdm conda --retries 3 --keep-going --default-resources slurm_account=primatediversity 
 
 ######### import the rules from the rules file #########
 
@@ -45,13 +46,13 @@ include: "rules/window_stats.smk"
 # Define the pipeline
 rule all:
     input:
-        expand("data/vcfs/{species}.vcf.gz", species='Alouatta_puruensis'),
-        expand("data/vcfs/{species}.vcf.gz.tbi", species='Alouatta_puruensis'),
-        #expand('data/stats/{species}.pi.csv',species='Alouatta_puruensis')
+        expand("data/vcfs/{species}.vcf.gz", species=species),
+        expand("data/vcfs/{species}.vcf.gz.tbi", species=species),
+        expand('data/stats/{species}.window.stats.csv',species=species)
 
 ruleorder:
     filter_bcf_samples >
-    #mean_pairwise_difference >
+    window_stats >
     index 
 
 
