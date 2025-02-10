@@ -34,6 +34,7 @@ species = config["species_mapping"].keys()
 #   Annotate the degeneracy of the gVCFs.
 #include: "rules/annotate_degeneracy.smk"
 
+# TODO: GET RECOMB RATES AND MERGE PER SPECIES AND LATER MERGE ALL
 ### Rule for removing bad samples ###
 #   Remove samples with low coverage.
 include: "rules/remove_bad_samples.smk"
@@ -43,16 +44,24 @@ include: "rules/remove_bad_samples.smk"
 #   Estimate windowbased Pi and Tajima's D.
 include: "rules/window_stats.smk"
 
+### Rule for Merging stat files ###
+#   Merge the windowbased summary statistics.
+include: "rules/merge_stats.smk"
+
 # Define the pipeline
 rule all:
     input:
         expand("data/vcfs/{species}.vcf.gz", species=species),
         expand("data/vcfs/{species}.vcf.gz.tbi", species=species),
-        expand('data/stats/{species}.window.stats.csv',species=species)
+        expand('data/stats/{species}.window.stats.csv',species=species),
+        expand('data/stats/{species}.combined.stats.csv',species=species),
+        "data/stats/all_species.combined.stats.csv"
 
 ruleorder:
     filter_bcf_samples >
     window_stats >
+    merge_per_species >
+    merge_all >
     index 
 
 

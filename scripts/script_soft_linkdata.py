@@ -3,9 +3,9 @@ import yaml
 import os
 from pathlib import Path
 
-def create_softlinks(config_file, base_path="../diversitynrecombination/data/window_bed/"):
+def create_softlinks(config_file, base_path="../diversitynrecombination/data/recombinationrates/"):
     # Create output directory if it doesn't exist
-    output_dir = Path("data/beds")
+    output_dir = Path("data/rec_rates")
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Read config file
@@ -21,10 +21,10 @@ def create_softlinks(config_file, base_path="../diversitynrecombination/data/win
         source_dir = species_parts[-1].lower()
         
         # Construct source path
-        source_path = Path(base_path) / reference / source_dir / f"nonpar/{source_dir}_100000.bed"
+        source_path = Path(base_path) / reference / source_dir / f"nonpar/{source_dir}_100000_recomb.bed"
         
         # Construct destination path
-        dest_path = output_dir / f"{species}.bed"
+        dest_path = output_dir / f"{species}_rec_rates.tsv"
         
         # Create softlink if source exists
         if source_path.exists():
