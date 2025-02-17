@@ -186,7 +186,7 @@ species_mapping:
     reference: Chlorocebus_aethiops
     samples:
     - PD_0029
-    - PD_0127
+#    - PD_0127 Missing ROH
   Allochrocebus_preussi:
     reference: Chlorocebus_aethiops
     samples:
@@ -211,7 +211,7 @@ species_mapping:
     reference: Erythrocebus_patas
     samples:
     - PD_0034
-    - PD_0062
+#    - PD_0062 Missing ROH
   Hylobates_klossii:
     reference: Nomascus_leucogenys
     samples:
@@ -238,10 +238,10 @@ species_mapping:
     reference: Cercopithecus_mitis
     samples:
     - PD_0042
-  Cercopithecus_lowei:
-    reference: Cercopithecus_mitis
-    samples:
-    - PD_0043
+  # Cercopithecus_lowei:
+  #   reference: Cercopithecus_mitis
+  #   samples:
+  #   - PD_0043 Missing ROH
   Macaca_siberu:
     reference: Macaca_mulatta
     samples:
@@ -250,10 +250,10 @@ species_mapping:
     reference: Nomascus_leucogenys
     samples:
     - PD_0049
-  Hylobates_agilis:
-    reference: Nomascus_leucogenys
-    samples:
-    - PD_0050
+  # Hylobates_agilis:
+  #   reference: Nomascus_leucogenys
+  #   samples:
+  #   - PD_0050 Missing ROH
   Nomascus_gabriellae:
     reference: Nomascus_leucogenys
     samples:
@@ -274,15 +274,15 @@ species_mapping:
     reference: Cercopithecus_mitis
     samples:
     - PD_0058
-    - PD_0407
+#    - PD_0407 Missing ROH
   Cercopithecus_diana:
     reference: Cercopithecus_mitis
     samples:
     - PD_0059
-  Cercopithecus_hamlyni:
-    reference: Cercopithecus_mitis
-    samples:
-    - PD_0060
+  # Cercopithecus_hamlyni:
+  #   reference: Cercopithecus_mitis
+  #   samples:
+  #   - PD_0060 Missing ROH
   Cercopithecus_mitis:
     reference: Cercopithecus_mitis
     samples:
@@ -324,7 +324,7 @@ species_mapping:
     reference: Atele_fusciceps
     samples:
     - PD_0073
-    - PD_0299
+#    - PD_0299 Missing ROH
   Ateles_chamek:
     reference: Atele_fusciceps
     samples:
@@ -335,7 +335,7 @@ species_mapping:
     - PD_0301
     - PD_0302
     - PD_0303
-  #  - PD_0305
+  #  - PD_0305 Missing ROH
     - PD_0431
     - PD_0432
     - PD_0433
@@ -398,10 +398,10 @@ species_mapping:
     reference: Cercopithecus_mitis
     samples:
     - PD_0091
-  Cercopithecus_pogonias:
-    reference: Cercopithecus_mitis
-    samples:
-    - PD_0092
+  # Cercopithecus_pogonias:
+  #   reference: Cercopithecus_mitis
+  #   samples:
+  #   - PD_0092 Missing ROH
   Cercopithecus_roloway:
     reference: Cercopithecus_mitis
     samples:
@@ -415,7 +415,7 @@ species_mapping:
     - PD_0542
     - PD_0543
     - PD_0544
-    - PD_0545
+#    - PD_0545 Missing ROH
   Hylobates_lar:
     reference: Nomascus_leucogenys
     samples:
@@ -815,7 +815,7 @@ species_mapping:
     reference: Cercocebus_atys
     samples:
     - PD_0256
-    - PD_0408
+#    - PD_0408 Missing ROH
   Pan_troglodytes:
     reference: Pan_troglodytes
     samples:
@@ -885,12 +885,12 @@ species_mapping:
   Plecturocebus_brunneus:
     reference: Pithecia_pithecia
     samples:
-    - PD_0274
+#    - PD_0274 Missing ROH
     - PD_0334
   Plecturocebus_caligatus:
     reference: Pithecia_pithecia
     samples:
-    - PD_0275
+#    - PD_0275 Missing ROH
     - PD_0335
     - PD_0336
   Plecturocebus_cinerascens:
@@ -937,14 +937,14 @@ species_mapping:
     reference: Aotus_nancymaae
     samples:
     - PD_0286
-    - PD_0794
+  #  - PD_0794 excluded for now
     - PD_0795
     - PD_0796
     - PD_0797
   Cheracebus_lucifer:
     reference: Pithecia_pithecia
     samples:
-    - PD_0288
+#    - PD_0288 Missing ROH
     - PD_0312
     - PD_0313
     - PD_0314
@@ -1052,7 +1052,7 @@ species_mapping:
     - PD_0538
     - PD_0539
     - PD_0816
-    - PD_0817
+#    - PD_0817 Missing ROH
     - PD_0818
     - PD_0819
     - PD_0820
@@ -1065,8 +1065,8 @@ species_mapping:
     - PD_0827
     - PD_0828
     - PD_0829
-    - PD_0830
-    - PD_0831
+ #   - PD_0830 Missing ROH
+ #   - PD_0831 Missing ROH
     - PD_0832
     - PD_0833
     - PD_0834
@@ -1097,7 +1097,7 @@ species_mapping:
     - PD_0566
     - PD_0567
     - PD_0568
-    - PD_0569
+#    - PD_0569
     - PD_0570
     - PD_0571
     - PD_0572
@@ -1271,7 +1271,7 @@ species_mapping:
   #   - PD_0791
   #   - PD_0792
   #   - PD_0793
-  #   - PD_0794_BAB
+  #   - PD_0794_BAB Missing ROH
   Aotus_azarae:
     reference: Aotus_nancymaae
     samples:
@@ -1397,7 +1397,7 @@ species_mapping:
   Pan_paniscus:
     reference: Pan_troglodytes
     samples:
-    - SAMN01920504
+  #  - SAMN01920504
     - SAMN01920505
     - SAMN01920506
     - SAMN01920507

@@ -5,6 +5,9 @@ configfile: "config.yaml"
 
 # Access configuration values
 species = config["species_mapping"].keys()
+# Species with more than 5 samples
+n=5
+n_samples_species = [species for species in config["species_mapping"] if len(config["species_mapping"][species]['samples']) >= n]
 
 
 ######### Command to run the pipeline for the new data #########
@@ -44,6 +47,9 @@ include: "rules/remove_bad_samples.smk"
 #   Estimate windowbased Pi and Tajima's D.
 include: "rules/window_stats.smk"
 
+### Rule for getting SFS ###
+include: "rules/get_sfs.smk"
+
 ### Rule for Merging stat files ###
 #   Merge the windowbased summary statistics.
 include: "rules/merge_stats.smk"
@@ -51,15 +57,21 @@ include: "rules/merge_stats.smk"
 # Define the pipeline
 rule all:
     input:
-        expand("data/vcfs/{species}.vcf.gz", species=species),
-        expand("data/vcfs/{species}.vcf.gz.tbi", species=species),
-        expand('data/stats/{species}.window.stats.csv',species=species),
-        expand('data/stats/{species}.combined.stats.csv',species=species),
-        "data/stats/all_species.combined.stats.csv"
-
+        expand("data/vcfs/{species}.masked.biallelic.vcf.gz", species=species),
+        expand("data/vcfs/{species}.masked.biallelic.vcf.gz.tbi", species=species),
+        #expand('data/stats/{species}.window.stats.csv',species=species),
+        #expand('data/stats/{species}.combined.stats.csv',species=species),
+        #"data/stats/all_species.combined.stats.csv",
+        #expand('data/callable_fraction/{species}_positive_mask.bed',species='Gorilla_gorilla'),
+        #expand('data/vcfs/{species}.masked.biallelic.vcf.gz',species='Gorilla_gorilla'),
+        expand('results/stats/sfs/{species}.sfs.csv',species=n_samples_species),
+        #'results/stats/sfs/Aotus_vociferans.sfs.csv'
 ruleorder:
     filter_bcf_samples >
+    filter_multiallelic_sites_nonvariant_sites_and_missing_genotypes >
     window_stats >
+    positive_mask >
+    get_sfs >
     merge_per_species >
     merge_all >
     index 
@@ -70,6 +82,9 @@ rule index:
         "{path}.vcf.gz"
     output:
         "{path}.vcf.gz.tbi"
+    resources:
+        mem_mb= 1000*8,
+        runtime= 60*4
     conda:
         "env/tabix.yaml"
     shell:

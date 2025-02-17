@@ -7,8 +7,8 @@ def get_time(wildcards, attempt):
 
 rule window_stats:
     input:
-        vcf = "data/vcfs/{species}.vcf.gz",
-        tbi = "data/vcfs/{species}.vcf.gz.tbi",
+        vcf = "data/vcfs/{species}.masked.biallelic.vcf.gz",
+        tbi = "data/vcfs/{species}.masked.biallelic.vcf.gz.tbi",
         bed = "data/beds/{species}.bed"
     output:
         csv ="data/stats/{species}.window.stats.csv"

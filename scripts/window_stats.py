@@ -89,8 +89,9 @@ def analyze_windows_combined(
                     
                     # Calculate singleton statistics
                     is_singleton = region_ac.is_singleton(1)
-                    n_singletons = np.sum(is_singleton)
-                    singleton_proportion = np.mean(is_singleton)
+                    rev_singleton = region_ac.is_singleton(0)
+                    n_singletons = np.sum(is_singleton+rev_singleton)
+                    singleton_proportion = np.mean(is_singleton+rev_singleton)
                     
                     # Calculate Tajima's D
                     tajima_d = allel.tajima_d(region_ac, min_sites=min_sites)
