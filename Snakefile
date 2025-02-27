@@ -59,13 +59,12 @@ rule all:
     input:
         expand("data/vcfs/{species}.masked.biallelic.vcf.gz", species=species),
         expand("data/vcfs/{species}.masked.biallelic.vcf.gz.tbi", species=species),
-        #expand('data/stats/{species}.window.stats.csv',species=species),
-        #expand('data/stats/{species}.combined.stats.csv',species=species),
-        #"data/stats/all_species.combined.stats.csv",
+        expand('data/stats/{species}.window.stats.csv',species=species),
+        expand('data/stats/{species}.combined.stats.csv',species=species),
+        "data/stats/all_species.combined.stats.csv",
         #expand('data/callable_fraction/{species}_positive_mask.bed',species='Gorilla_gorilla'),
         #expand('data/vcfs/{species}.masked.biallelic.vcf.gz',species='Gorilla_gorilla'),
-        expand('results/stats/sfs/{species}.sfs.csv',species=n_samples_species),
-        #'results/stats/sfs/Aotus_vociferans.sfs.csv'
+        expand('results/stats/sfs/{species}.sfs.csv',species=n_samples_species)
 ruleorder:
     filter_bcf_samples >
     filter_multiallelic_sites_nonvariant_sites_and_missing_genotypes >
