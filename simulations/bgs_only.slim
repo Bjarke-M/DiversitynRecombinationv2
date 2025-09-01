@@ -1,12 +1,12 @@
 // set up a simple neutral simulation
 initialize() {
 	// Define constants 
-	defineConstant('endsfile','SLiM/ends_chr12.csv');
-	defineConstant('ratesfile','SLiM/rates_chr12.csv');
-	defineConstant('n',1000);
+	defineConstant('endsfile','ends_chr12.csv');
+	defineConstant('ratesfile','rates_chr12.csv');
+	//defineConstant('N',1000);
 	defineConstant('mu',1e-6);
 	defineConstant('runtime',asInteger(10/mu));
-	defineConstant('tsfile','SLiM/tsfile.trees');
+	//defineConstant('OUT','SLiM/tsfile.trees');
 	// init ts
 	initializeTreeSeq();
 	// Init simulation 
@@ -29,11 +29,11 @@ initialize() {
 	initializeRecombinationRate(rates, ends);
 }
 
-// create a population of 500 individuals
+// create a population
 1 early() {
-	sim.addSubpop("p1", n);
+	sim.addSubpop("p1", N);
 	print(runtime);
 }
 
 
-runtime late() {sim.treeSeqOutput(tsfile);}
+runtime late() {sim.treeSeqOutput(OUT);}

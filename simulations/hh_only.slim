@@ -1,0 +1,44 @@
+// set up a simple neutral simulation
+initialize() {
+	// Define constants 
+	defineConstant('endsfile','ends_chr12.csv');
+	defineConstant('ratesfile','rates_chr12.csv');
+	//defineConstant('N',1000);
+	defineConstant('mu',1e-8);
+	//defineConstant('S',0.1);
+	defineConstant('runtime',asInteger(10/mu));
+	//defineConstant('OUT','SLiM/tsfile.trees');
+	// init ts
+	initializeTreeSeq();
+	// Init simulation 
+	initializeMutationRate(mu);
+	
+	// m1 mutation type: deleterious 
+	initializeMutationType("m1", 0.5, "f", S);
+
+
+	// g1 genomic element type: uses m1 for all mutations
+	initializeGenomicElementType("g1", m1, 1.0);
+	initializeGenomicElement(g1, 0, 133275309);
+	
+	// load recombination map
+	rates_map = readCSV(ratesfile, "rates", sep=",");
+	rates = rates_map.getValue("rates");
+	ends_map = readCSV(endsfile, "ends", sep=",");
+	ends = ends_map.getValue("ends");
+	ends = c(ends[2:(size(ends)-1)] - 2, 133275309);
+	initializeRecombinationRate(rates, ends);
+}
+
+// create a population of 500 individuals
+1 early() {
+	sim.addSubpop("p1", N);
+	print(runtime);
+}
+
+
+
+
+// output samples of 10 genomes periodically, all fixed mutations at end
+
+runtime late() {sim.treeSeqOutput(OUT);}
