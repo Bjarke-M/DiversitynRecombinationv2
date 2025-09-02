@@ -5,7 +5,7 @@ gwf = Workflow()
 def bgs_only(out,param):
     inputs = []
     outputs = [out]
-    options = {"cores" : 1, 'memory': "18g", 'walltime': "1-00:00:00", 'account': "primatediversity"}
+    options = {"cores" : 1, 'memory': "512g", 'walltime': "7-00:00:00", 'account': "primatediversity"}
     executor = Conda('slim')
     spec = f'''
     slim -d N={param} -d "OUT='{out}'" bgs_only.slim  
@@ -16,7 +16,7 @@ def bgs_only(out,param):
 def hh_only(out, ne, s):
     inputs = []
     outputs = []
-    options = {"cores" : 1, 'memory': "18g", 'walltime': "1-00:00:00", 'account': "primatediversity"}
+    options = {"cores" : 1, 'memory': "256g", 'walltime': "1-00:00:00", 'account': "primatediversity"}
     executor = Conda('slim')
     spec = f'''
     slim -d N={ne} -d S={s} -d "OUT='{out}'" hh_only.slim  

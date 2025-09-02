@@ -8,7 +8,7 @@ initialize() {
 	defineConstant('runtime',asInteger(10/mu));
 	//defineConstant('OUT','SLiM/tsfile.trees');
 	// init ts
-	initializeTreeSeq();
+	initializeTreeSeq(simplificationRatio=INF, timeUnit="generations");
 	// Init simulation 
 	initializeMutationRate(mu);
 	

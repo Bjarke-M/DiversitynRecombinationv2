@@ -3,8 +3,8 @@ from templates import *
 import itertools
 gwf = Workflow()
 
-nes=[1000]#,10000,100000]
-replicates=[i for i in range(1)]
+nes=[1000,10000,100000]
+replicates=[i for i in range(10)]
 parameter_space = itertools.product(nes,replicates)
 
 
@@ -17,7 +17,7 @@ for ne, replicate in parameter_space:
                                 )
 )
 
-s = [0.1]#,1,10]
+s = [0.1,0.01,0.001]
 hh_parameter_space = itertools.product(nes, s, replicates)
 
 for ne, s, replicate in hh_parameter_space:
