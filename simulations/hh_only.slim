@@ -6,10 +6,10 @@ initialize() {
 	//defineConstant('N',1000);
 	defineConstant('mu',1e-8);
 	//defineConstant('S',0.1);
-	defineConstant('runtime',asInteger(10/mu));
+	defineConstant('runtime',100000);
 	//defineConstant('OUT','SLiM/tsfile.trees');
 	// init ts
-	initializeTreeSeq(simplificationRatio=INF, timeUnit="generations");
+	initializeTreeSeq(simplificationInterval=500, timeUnit="generations");
 	// Init simulation 
 	initializeMutationRate(mu);
 	
@@ -34,10 +34,26 @@ initialize() {
 1 early() {
 	sim.addSubpop("p1", N);
 	print(runtime);
+	print("Generation: " + community.tick);
+        
+        // Print the current system time (wall clock time)
+    print("System time: " + time());
+}
+
+late() {
+    if (community.tick % 100 == 0) {
+        // Print the generation/tick number
+        print("Generation: " + community.tick);
+        
+        // Print the current system time (wall clock time)
+        print("System time: " + time());
+ 
+        print("---");  // separator for readability
+    }
 }
 
 
-
+20000 late() {sim.treeSeqOutput(OUT_MID);}
 
 // output samples of 10 genomes periodically, all fixed mutations at end
 
