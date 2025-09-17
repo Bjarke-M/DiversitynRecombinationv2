@@ -4,8 +4,8 @@ initialize() {
 	defineConstant('endsfile','ends_chr12.csv');
 	defineConstant('ratesfile','rates_chr12.csv');
 	//defineConstant('N',1000);
-	defineConstant('mu',1e-7);
-	defineConstant('runtime',asInteger(10/mu));
+	defineConstant('mu',1e-8);
+	defineConstant('runtime',asInteger(100000));
 	//defineConstant('OUT','SLiM/tsfile.trees');
 	// init ts
 	initializeTreeSeq(simplificationInterval=50, timeUnit="generations");

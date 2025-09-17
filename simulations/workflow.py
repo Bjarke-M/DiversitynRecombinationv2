@@ -20,7 +20,8 @@ for ne, replicate in parameter_space:
 
 
 s = [0.1,0.01,0.001]
-hh_parameter_space = itertools.product(nes, s, replicates)
+hh_nes=[100,1000,10000] 
+hh_parameter_space = itertools.product(hh_nes, s, replicates)
 
 for ne, s, replicate in hh_parameter_space:
     jobind_hh_slim = f'slim_hh_ne_{ne}_s_{s}_replicate_{replicate}'
