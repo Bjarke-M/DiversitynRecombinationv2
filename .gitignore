@@ -3,3 +3,5 @@ data/
 results/
 simulations/.gwf/
 simulations/__pychache__/
+simulations/results/
+simulations/things_to_delete/
